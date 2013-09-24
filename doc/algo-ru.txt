@@ -51,8 +51,8 @@ RESULT_FOREGROUND -- значение результата для найденн
          иначе -- выяснили что тут не фоновый цвет
             если FEEDBACK [X, Y] /= FEEDBACK_KEEP и хочу_встроить_в_фон() то
                -- попробуем перекрасить в фон
-               NEIGHBOUR_X, NEIGHBOUR_Y := некий_сосед(X, Y);
-               если RESULT [NEIGHBOUR_X, NEIGHBOUR_Y] = RESULT_BACKGROUND то 
+               NEIGHBOUR := некий_сосед(X, Y);
+               если RESULT [NEIGHBOUR.X, NEIGHBOUR.Y] = RESULT_BACKGROUND то 
                   -- на предыдущем (FIXME!) цикле имели фон в качестве соседа 
                   -- можно обновить модель фона в текущей точке
                   обновить_фон(X, Y);
